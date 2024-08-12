@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* Add this to your global CSS file or within a <style jsx> block */
+.card {
+  perspective: 1000px; /* This gives a 3D space to the card */
+}
+
+.card-content {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .card-content {
+  transform: rotateY(-10deg) rotateX(-20deg) scale(1.0); /* 3D rotation and scaling on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Elevate the card with a shadow */
+}

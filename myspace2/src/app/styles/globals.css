@@ -33,17 +33,38 @@ body {
 }
 
 
-/* Add this to your global CSS file or within a <style jsx> block */
-.card {
-  perspective: 1000px; /* This gives a 3D space to the card */
+
+
+
+/* styles/globals.css */
+
+article {
+  line-height: 1.6;
 }
 
-.card-content {
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+h1, h2, h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.card:hover .card-content {
-  transform: rotateY(-10deg) rotateX(-20deg) scale(1.0); /* 3D rotation and scaling on hover */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Elevate the card with a shadow */
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+code {
+  background: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 3px;
+  overflow-x: auto;
 }

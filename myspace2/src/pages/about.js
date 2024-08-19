@@ -6,7 +6,7 @@ export default function About() {
     return (
       <div>
 
-        <Header />
+
         <header className="bg-gray-800 text-white p-4">
           <h1 className="text-3xl font-bold">About Me</h1>
         </header>
@@ -15,7 +15,7 @@ export default function About() {
 
         </main>
 
-        <Footer />
+
         
       </div>
     );

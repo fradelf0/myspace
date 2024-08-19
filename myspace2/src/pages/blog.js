@@ -15,7 +15,7 @@ export async function getStaticProps() {
 export default function Blog({ allPostsData }) {
   return (
     <div>
-      <Header />
+
       <h1>Blog</h1>
       <ul>
         {allPostsData.map(({ id, date, title }) => (
@@ -28,7 +28,7 @@ export default function Blog({ allPostsData }) {
           </li>
         ))}
       </ul>
-      <Footer />
+
     </div>
   );
 }

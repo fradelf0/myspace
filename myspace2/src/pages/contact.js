@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 export default function Contact() {
     return (
       <div>
-        <Header />
+
         <header className="bg-gray-800 text-white p-4">
           <h1 className="text-3xl font-bold">Contact Me</h1>
         </header>
 
-        <Footer />
+
       </div>
     );
   }

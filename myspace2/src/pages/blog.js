@@ -1,17 +1,33 @@
+import Link from 'next/link';
+import { getSortedPostsData } from '../../lib/posts';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default function Blog() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Blog({ allPostsData }) {
   return (
     <div>
       <Header />
-      <header className="bg-gray-800 text-white p-4">
-        <h1 className="text-3xl font-bold">Blog</h1>
-      </header>
-
-      <main className="flex flex-col items-center justify-center min-h-screen px-4">
-
-      </main>
+      <h1>Blog</h1>
+      <ul>
+        {allPostsData.map(({ id, date, title }) => (
+          <li key={id}>
+            <Link href={`blog/${id}`}>
+              {title}
+            </Link>
+            <br />
+            <small>{date}</small>
+          </li>
+        ))}
+      </ul>
       <Footer />
     </div>
   );
